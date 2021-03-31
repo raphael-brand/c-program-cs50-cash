@@ -7,6 +7,7 @@ int main(void)
     float cash_amount = 0.00;
     do {
         cash_amount = get_float("Which amount?");
+// If the user fails to provide a non-negative value, your program should re-prompt the user for a valid amount again and again until the user complies
     } while(cash_amount <= 0.00);
 
     printf("You gave %.2f USD\n", cash_amount);
