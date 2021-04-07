@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <math.h>
+
+int convert_to_cents(float dollars);
 
 int main(void)
 {
@@ -13,12 +16,18 @@ int main(void)
     while (cash_amount <= 0.00);
 
     printf("You gave %.2f USD\n", cash_amount);
+
+    printf("You gave %i cents\n", convert_to_cents(cash_amount));
 }
 
 struct {
-    int penny: 1; 
+    int penny: 1;
     int nickle: 5;
     int dime: 10;
     int quarter: 25;
 
 } coins;
+
+int convert_to_cents(float dollars) {
+    return round(dollars * 100);
+}
