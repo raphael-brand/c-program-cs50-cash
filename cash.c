@@ -15,3 +15,10 @@ int main(void)
     printf("You gave %.2f USD\n", cash_amount);
 }
 
+struct {
+    int penny: 1; 
+    int nickle: 5;
+    int dime: 10;
+    int quarter: 25;
+
+} coins;
